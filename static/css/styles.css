@@ -1,0 +1,707 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+    margin: 0 auto;
+    height: 100vh;
+    font-family: 'Questrial', sans-serif !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #003f5c;
+    color: rgb(0, 0, 0);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.auth-buttons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #b36500;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #b36500;
+    color: white;
+}
+.conteiner-nav{
+    width: 90%;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-per{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20pt;
+}
+
+.nav-per li{
+    margin: 5px;
+}
+.llamado-urgencia{
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgba(186, 24, 27, 0.8);
+    background-color: rgba(229, 56, 59, 0.8);
+    background-color: rgb(255, 0, 0);*/
+    color: #fff;
+    text-transform: capitalize;
+    font-style: oblique;
+    font-synthesis: style;
+    letter-spacing: 0.5px;
+    border: 2px #A4161A solid ;
+    align-items: center;
+    justify-content:center;
+    padding-bottom: 2px;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: justify;
+    
+
+}
+
+.llamado-urgencia span{margin:0% ;}
+
+.bkg-ani{
+        background: linear-gradient(271deg, #e47474, #f53333, #fb0000);
+        background-size: 600% 600%;
+    
+        -webkit-animation: AnimationName 5s ease infinite;
+        -moz-animation: AnimationName 5s ease infinite;
+        -o-animation: AnimationName 5s ease infinite;
+        animation: AnimationName 5s ease infinite;
+    }
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 69%}
+        50%{background-position:100% 32%}
+        100%{background-position:0% 69%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 69%}
+        50%{background-position:100% 32%}
+        100%{background-position:0% 69%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 69%}
+        50%{background-position:100% 32%}
+        100%{background-position:0% 69%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 69%}
+        50%{background-position:100% 32%}
+        100%{background-position:0% 69%}
+    }
+
+
+
+
+
+/*Articulo 1 p de prensentacion y botones de comunicacion */
+
+.articulo1{
+
+    background-image:url(/static/imgs/diagramabg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 5vw;
+
+}
+
+.cab{
+    text-align: center;
+    justify-self:center;
+    font-size: 42pt;
+    color: #04325B ;
+    -webkit-text-stroke: 0.1px #071F40 ;
+    font-weight: bolder;
+    padding-top: 15vh;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin-top: 40vh;
+    height: 220px;    
+}
+
+
+.botones a{
+    color: #071F40;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.botones a::after{
+    color: #E2E2E2;
+}
+
+.botones a:hover{
+    color: #E2E2E2;
+}
+
+#bllamada{
+    background-color:#4040ff;
+    border-color: #6161f5 solid 5px;   
+}
+
+#bwhatsapp{
+    background-color: #00ea38;
+    border-color: #06f83f  solid 5px;
+}
+.botones button{
+    padding: 20px 80px;
+}
+
+.botones button svg{
+    margin: 5px;
+}
+/*media query para ser responsive en celular*/
+@media  (max-width:470px) {
+    .llamado-urgencia{
+        flex-direction: row;
+        align-items: center;
+        justify-self: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .articulo1{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .articulo1 p{
+        font-size: 20pt;
+    }
+    .cab{
+        font-size: 12pt;
+        
+        padding-top: 4vh;
+    }
+    .botones{
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+
+    .botones button {
+        padding: 20px 90px;
+        margin-top: 0%;
+    }
+    .botones a{
+        font-size: medium;
+    }
+
+    .botones button svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .titulo-nosotros{
+        display:contents;
+        font-size: 10pt;
+        color: #071F40;
+        font-weight: bold;
+    }
+
+    .nav-per a{
+        font-size: 12pt;
+    }
+    #icono{
+        margin-right: 25% ;
+    }
+    .cardp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(1, 90, 149, 0.5 ) !important;
+        margin-left: 25px;
+        border: solid 0.5px !important;
+        color: #071F40;
+        font-weight: 700;
+        height: 30vw ;
+        width: 200vw;
+        margin-bottom: 50px;
+        padding: 70px 20px ;
+    
+    }
+
+    .cobertura{
+        display: none;
+    }
+
+    .formulario{
+    width: 350px;
+    
+    }
+
+    .noso{
+        width: 450;
+    }
+
+    .pie-pagina-contenedor{
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        
+
+
+    }
+
+    .p1, .p2{
+        margin: 0%;
+    }
+
+    #p11{
+        font-size: 20pt;
+    }
+    
+    .p1{
+        position: relative;
+        bottom: 10px;
+    }
+
+    .p2{
+        position: relative;
+        bottom: 100px;
+        left: 190px;
+    }
+
+}
+
+
+/*SEPARADOR
+
+.separador{
+    position: relative;
+    bottom: 13.1vw;
+    right: 1.5vw;
+    width: 0;
+    height: 0;
+    border-right: 100.3vw solid  transparent;
+    border-bottom: 13.8vw solid red;
+    margin-top: 0;
+    margin-bottom: 0%;
+    opacity:0.8 ;
+
+}
+*/
+
+
+/*seccion de servicios
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+*/
+
+.servicios {
+    background-color: #E2E1E1;
+}
+
+
+
+.list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+
+
+
+}
+
+
+.titu{
+    display: flex;
+    justify-content: flex-start;
+    color: #071F40;
+    font-style: oblique;   
+}
+
+.titu h3{
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+
+
+.cardp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(1, 90, 149, 0.5 ) !important;
+    margin-left: 25px;
+    border: solid 0.5px !important;
+    color: #071F40;
+    font-weight: 700;
+    height:18vw ;
+    width: 200vw;
+
+}
+
+.list img{
+    width: 10vw;
+    margin-left: 2vw;
+
+}
+
+
+
+/* caja modelo etiqueta test*/
+.titu h3{
+    padding: 10px;
+	color: #E2E2E2;
+	font-weight: bold;
+	display: inline-block;
+	border-right: 30px solid transparent;
+	border-bottom: 50px solid #04325B; 
+	height: 0;
+	line-height: 50px;
+
+    font-size: larger;
+    padding-bottom: 0;
+}
+.list{
+    border: 3px solid #015A95;	
+    border-top: 10px solid #04325B;	   	 
+    padding: 20px;
+    margin-bottom: 150px;
+
+}
+
+.separador{
+    background-color: #E2E1E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.titulo-nosotros{
+    box-shadow: #04325B 0px 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 150px;
+}
+
+.titulo-nosotros h3{
+    font-size: 32pt;
+    color: #071F40;
+    font-weight: bolder
+}
+/*
+.titulo-nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+
+.titulo-nosotros h2{
+    padding-top: 0%;
+	color: #05204A;
+	font-weight: bold;
+	display: inline-block;
+	border-right: 30px solid transparent;
+	border-bottom: 50px solid #ff194b; 
+	height: 0;
+	line-height: 35px;
+    font-size: xx-large;
+    padding-bottom: 0;
+
+}
+*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.noso{
+    width: 75%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.noso h3{
+    padding: 15px;
+	color: #E2E2E2;
+	font-weight: bold;
+	display: inline-block;
+	border-right: 30px solid transparent;
+	border-bottom: 50px solid #04325B; 
+	height: 0;
+	line-height: 50px;
+
+    font-size: larger;
+    padding-bottom: 0;
+}
+
+
+
+
+
+.parrafo-bgk{
+    border: 3px solid #015A95;	
+    border-top: 10px solid #04325B;	   	 
+    padding: 10px;
+    color: #071F40;
+    font-weight: bold;
+    font-size: 16pt;
+
+}
+
+
+
+.formularioCab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E2E1E1;
+
+
+
+}
+
+.formularioCab h3{
+    padding: 15px;
+	color: #E2E2E2;
+	font-weight: bold;
+	display: inline-block;
+	border-right: 30px solid transparent;
+	border-bottom: 50px solid #04325B; 
+	height: 0;
+	line-height: 50px;
+    font-size: larger;
+    padding-bottom: 0
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #015A95;	
+    border-top: 10px solid #04325B;	   	 
+    padding: 50px;
+    color: #071F40;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.formulario textarea{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #E2E1E1;
+    border: #05204A solid 2px;
+}
+
+.formulario input{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #E2E1E1;
+    border: #05204A solid 2px;
+}
+
+#enviar{
+    background-color: #05204A ;
+}
+
+
+
+
+.bg-general {
+    background-color: #F2F2F2
+
+/*
+    background: linear-gradient(55deg, #e1e1e1, #f2f2f2, #d6d6d6, #d6d6d6, #b5b5b5);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 25s ease infinite;
+    -moz-animation: AnimationName 25s ease infinite;
+    animation: AnimationName 25s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+*/
+}
+
+
+
+
+.contacto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+}
+
+#contacto{
+    background-color: #F2F2F2
+}
+
+
+
+.zona-cobertura{
+
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+.zona-cobertura iframe{
+    width: 100%;
+    height: 415px;
+    border: 3px solid #015A95;	
+    border-top: 10px solid #04325B;
+
+}
+.cobertura h3{
+    padding: 10px;
+	color: #E2E2E2;
+	font-weight: bold;
+	display: inline-block;
+	border-right: 30px solid transparent;
+	border-bottom: 50px solid #04325B; 
+	height: 0;
+	line-height: 50px;
+    font-size: larger;
+    padding-bottom: 0;
+    background-color: #F2F2F2
+}
+
+.cinta-contacto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+    color: #E2E2E2;
+    background-color: rgba(4, 50, 91, 0.9);
+}
+
+.c1, .c2 , .c3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c1, .c2 , .c3 p{
+    font-size: 12pt;
+    text-align: center;
+    
+}
+.c1, .c2 , .c3 h4{
+    font-weight: bold;
+    font-style: oblique;
+}
+.cinta-contacto a{
+    color:#E2E1E1;
+    text-decoration: none;
+}
+
+.cinta-contacto a:hover{color: #E2E1E1;}
+.cinta-contacto a:active{color:#E2E1E1}
+
+.pie-pagina-contenedor{
+    color: black ;
+    background-color: #E2E2E2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.p1{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 0%;
+}
+
+.p1 p{
+    font-size: 20pt;
+    padding: 20px 50px;
+    margin: 0%;
+    padding-left: 0%;
+}
+
+
+
+
+.p2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 50px;
+    margin: 0%;
+
+    padding-right: 0%;
+}
+
+.p2 svg{
+    margin: 5px;
+    color: black;
+}
+
