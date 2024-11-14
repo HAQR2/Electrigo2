@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenidos</title>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://alcdn.msauth.net/browser/2.13.0/js/msal-browser.min.js"></script>
+</head>
+<body>
+  <h1>Bienvenidos</h1>
+  <p>Inicia sesión con una de las siguientes opciones:</p>
+  
+  <!-- Botón de inicio de sesión con Google -->
+  <div class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
+
+  <!-- Botón de inicio de sesión con Microsoft -->
+  <button id="microsoftLoginButton">Iniciar sesión con Microsoft</button>
+
+  <script>
+    // Configuración para autenticación de Google
+    function onGoogleSignIn(googleUser) {
+      const profile = googleUser.getBasicProfile();
+      console.log('Nombre: ' + profile.getName());
+      console.log('Correo: ' + profile.getEmail());
+      // Aquí puedes redirigir o mostrar un mensaje de éxito
+    }
+
+    // Configuración para autenticación de Microsoft
+    const msalConfig = {
+      auth: {
+        clientId: 'TU_CLIENT_ID_DE_MICROSOFT',
+        redirectUri: window.location.href
+      }
+    };
+    const msalInstance = new msal.PublicClientApplication(msalConfig);
+
+    document.getElementById('microsoftLoginButton').addEventListener('click', () => {
+      msalInstance.loginPopup().then(response => {
+        console.log('Nombre: ' + response.account.name);
+        console.log('Correo: ' + response.account.username);
+        // Aquí puedes redirigir o mostrar un mensaje de éxito
+      }).catch(error => {
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>

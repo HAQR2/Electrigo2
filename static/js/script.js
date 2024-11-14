@@ -1,5 +1,8 @@
 //alerts
-function alertaInicial() {
+
+//this ok
+
+ function alertaInicial() {
     swal({
         title: "URGENCIAS",
         text: "comunicate al 11 55258145",
@@ -7,6 +10,7 @@ function alertaInicial() {
 });
 }
 
+//this to mod
 function envioExitoso() {
     swal({
         title: "Excelente",
@@ -15,6 +19,15 @@ function envioExitoso() {
     });
 
 
+    function alertCorrect(){
+        document.getElementById("enviar").addEventListener("click", function(){
+            
+            envioExitoso()
+    
+        })
+    }    
+
+//this no necesari
 function faltandatos(){
     swal({
         title: 'DATOS ERRONEOS',
@@ -26,6 +39,8 @@ alertaInicial()
 
 }
 
+
+/*
 function validarFormulario(){
     let nombre = document.getElementById('nombre').value
     let correo = document.getElementById('correo').value
@@ -39,6 +54,16 @@ function validarFormulario(){
         return envioExitoso()
     }
 
+}
+
+*/
+
+function alertCorrect(){
+    document.getElementById("enviar").addEventListener("click", function(){
+        
+        envioExitoso()
+
+    })
 }
   // Obtener los valores de los campos
 
@@ -58,5 +83,3 @@ function statusFormulario(){
         }
     })
 }
-
-
