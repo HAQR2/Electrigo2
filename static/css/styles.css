@@ -119,14 +119,11 @@ body{
     }
 
 
-
-
-
-/*Articulo 1 p de prensentacion y botones de comunicacion */
+/*Articulo 1 p este coloca el fondo */ 
 
 .articulo1{
 
-    background-image:url(/static/imgs/diagramabg.png);
+    background-image:url(/static/imgs/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -298,32 +295,6 @@ body{
 
 }
 
-
-/*SEPARADOR
-
-.separador{
-    position: relative;
-    bottom: 13.1vw;
-    right: 1.5vw;
-    width: 0;
-    height: 0;
-    border-right: 100.3vw solid  transparent;
-    border-bottom: 13.8vw solid red;
-    margin-top: 0;
-    margin-bottom: 0%;
-    opacity:0.8 ;
-
-}
-*/
-
-
-/*seccion de servicios
-
-    display: flex;
-    justify-self: center;
-    align-items: center;
-*/
-
 .servicios {
     background-color: #E2E1E1;
 }
@@ -422,31 +393,7 @@ body{
     color: #071F40;
     font-weight: bolder
 }
-/*
-.titulo-nosotros{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 0px;
-    margin-left: 25%;
-    margin-right: 25%;
-    
-}
 
-.titulo-nosotros h2{
-    padding-top: 0%;
-	color: #05204A;
-	font-weight: bold;
-	display: inline-block;
-	border-right: 30px solid transparent;
-	border-bottom: 50px solid #ff194b; 
-	height: 0;
-	line-height: 35px;
-    font-size: xx-large;
-    padding-bottom: 0;
-
-}
-*/
 .contenedor{
     display: flex;
     justify-content: center;
@@ -553,31 +500,6 @@ body{
 
 .bg-general {
     background-color: #F2F2F2
-
-/*
-    background: linear-gradient(55deg, #e1e1e1, #f2f2f2, #d6d6d6, #d6d6d6, #b5b5b5);
-    background-size: 1000% 1000%;
-
-    -webkit-animation: AnimationName 25s ease infinite;
-    -moz-animation: AnimationName 25s ease infinite;
-    animation: AnimationName 25s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 88%}
-    50%{background-position:100% 13%}
-    100%{background-position:0% 88%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 88%}
-    50%{background-position:100% 13%}
-    100%{background-position:0% 88%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 88%}
-    50%{background-position:100% 13%}
-    100%{background-position:0% 88%}
-*/
 }
 
 
