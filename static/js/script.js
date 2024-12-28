@@ -83,3 +83,73 @@ function statusFormulario(){
         }
     })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const updateLocalStorage = () => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    };
+
+    const renderCart = () => {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        cartItemsContainer.innerHTML = '';
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = item;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Eliminar';
+            deleteButton.classList.add('delete-item');
+            deleteButton.addEventListener('click', () => {
+                cart.splice(index, 1);
+                updateLocalStorage();
+                renderCart();
+            });
+
+            li.appendChild(deleteButton);
+            cartItemsContainer.appendChild(li);
+        });
+        cartCount.textContent = cart.length;
+    };
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const servicio = button.getAttribute('data-servicio');
+            cart.push(servicio);
+            updateLocalStorage();
+            renderCart();
+            alert(`${servicio} ha sido agregado al carrito.`);
+        });
+    });
+
+    // Renderiza el carrito al cargar la página
+    renderCart();
+
+    // Maneja el estado desplegable del carrito con animación
+    document.getElementById('cart-link').addEventListener('mouseover', (event) => {
+        event.preventDefault();
+        const cartItems = document.getElementById('cart-items');
+        cartItems.classList.add('show');
+    });
+
+    document.getElementById('cart-link').addEventListener('mouseout', (event) => {
+        event.preventDefault();
+        const cartItems = document.getElementById('cart-items');
+        cartItems.classList.remove('show');
+    });
+
+    // Cierra el carrito si se hace clic fuera de él
+    window.onclick = (event) => {
+        if (!event.target.matches('#cart-link') && !event.target.matches('#cart-container h2')) {
+            const dropdowns = document.getElementsByClassName('dropdown-content');
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    };
+});

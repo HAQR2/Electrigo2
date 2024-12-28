@@ -30,6 +30,11 @@
             <a href="/pages/proyecto.html">PROYECTO</a>
             <a href="/pages/blog.html">BLOG</a>
             <a href="#contacto">CONTACTO</a>
+            <a href="#servicios" id="cart-link">
+                <div id="cart-container" class="dropdown">
+                    <h2>Carrito de Compras (<span id="cart-count">0</span>)</h2>
+                    <ul id="cart-items" class="dropdown-content"></ul>                
+            
         </nav>
         <div class="auth-buttons">
             <button class="login-btn" onclick="window.location.href='sign.html'">INICIAR</button>
@@ -86,35 +91,36 @@
             <div class="contenedor">
                 <div class="aside-servicios">
                     <div class="titu">
-                        <h3>Nuestros servicios</h3>
+                        <h3>Nuestros servicios</h3>                                                                                 
                     </div>
                     <div class="list">
                         <div class="card cardp" style="width: 18rem;">
                             <img src="/static/imgs/tecnico1.png" class="card-img-top"
-                                alt="...">
+                                alt="...">                                
                             <div class="card-body">
-                                <p class="card-text">Instalaciones y reparaciones eléctricas en general.</p>
+                                <button class="add-to-cart" data-servicio="">Instalación y reparacion en general.</button>
+                                <p class="card-text"></p>                                                                
                             </div>
                         </div>
                         <div class="card cardp" style="width: 18rem;">
                             <img src="/static/imgs/tecnico2.png" class="card-img-top"
                                 alt="...">
                             <div class="card-body">
-                                <p class="card-text">Proyectos habitacionales, industriales y comerciales.</p>
+                                <button class="add-to-cart" data-servicio="">Proyectos habitacionales, industriales y comerciales.</button>
                             </div>
                         </div>
                         <div class="card cardp" style="width: 18rem;">
                             <img src="/static/imgs/tecnico4.png" class="card-img-top"
                                 alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mediciones de puesta a tierra y valores lumínicos.</p>
+                            <div class="card-body">                                
+                                <button class="add-to-cart" data-servicio="">Mediciones de puesta a tierra y valores lumínicos.</button>
                             </div>
                         </div>
                         <div class="card cardp" style="width: 18rem;">
                             <img src="/static/imgs/tecnico3.png" class="card-img-top"
                                 alt="...">
                             <div class="card-body">
-                                <p class="card-text">Certificaciones y auditorías.</p>
+                                <button class="add-to-cart" data-servicio="">Certificaciones y auditorías.</button>                                
                             </div>
                         </div>
                     </div>
